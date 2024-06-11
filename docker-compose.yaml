@@ -1,0 +1,19 @@
+version: '3'
+services:
+  grumble_mumble_voip_server:
+    container_name: grumble_mumble_voip
+    hostname: grumble_mumble_voip
+    restart: always
+    image: mumble-voip/grumble:latest
+    volumes:
+      - ./data/.grumble:/data
+    ports:
+      - "64738:64738/tcp"
+      - "64738:64738/udp"
+    environment:
+      TZ: America/Sao_Paulo
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
