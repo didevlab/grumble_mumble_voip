@@ -91,6 +91,7 @@ $ docker run \
 ```
 $ cd ../
 $ docker compose up -d
+$ sudo chmod 777 -R data/
 $ docker compose logs -f
 ```
 
