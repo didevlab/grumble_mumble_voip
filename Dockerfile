@@ -10,7 +10,7 @@ RUN apk add --no-cache git build-base
 RUN go get -v -t ./... \
   && go build -o /go/bin/grumble mumble.info/grumble/cmd/grumble \
   && go test -v ./...
-
+#
 FROM alpine:edge
 
 COPY --from=builder /go/bin/grumble /usr/bin/grumble
