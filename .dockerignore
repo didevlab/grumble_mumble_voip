@@ -1,0 +1,15 @@
+# Ignorar o arquivo do Docker Compose
+docker-compose.yaml
+docker-compose.yml
+Dockerfile
+
+# Ignorar arquivos e diretórios relacionados ao Git
+.git
+.github
+.gitignore
+
+
+# Another
+AUTHORS
+LICENSE
+README.md
